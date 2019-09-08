@@ -3,6 +3,7 @@ package com.rockmvvm.rockbasemvvm
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import com.rockmvvm.rockbasemvvm.data.DataManager
+import com.rockmvvm.rockbasemvvm.ui.currencyconverter.CurrencyViewModel
 import com.rockmvvm.rockbasemvvm.ui.post.PostListViewModel
 import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProvider
 import javax.inject.Inject
@@ -27,6 +28,12 @@ class ViewModelFactory
             @Suppress("UNCHECKED_CAST")
             return PostListViewModel(mDataManager, mSchedulerProvider) as T
         }
+
+        if (modelClass.isAssignableFrom(CurrencyViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return CurrencyViewModel(mDataManager, mSchedulerProvider) as T
+        }
+
         throw IllegalArgumentException("Unknown ViewModel class") as Throwable
     }
 }

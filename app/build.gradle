@@ -37,7 +37,7 @@ android {
 
         debug {
             minifyEnabled false
-            buildConfigField 'String', 'BASE_URL', '"https://jsonplaceholder.typicode.com"'
+            buildConfigField 'String', 'BASE_URL', '"https://apilayer.net/api/"'
         }
 
         release {
@@ -92,7 +92,7 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
     implementation 'com.squareup.okhttp3:logging-interceptor:3.14.1'
-
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
     // Dagger 2
     implementation "com.google.dagger:dagger:$dagger2_version"

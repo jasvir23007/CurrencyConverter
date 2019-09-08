@@ -11,4 +11,8 @@ import io.reactivex.Observable
 interface ApiHelper {
 
     fun doPostsApiCall(): Observable<List<Post>>
+
+    fun doApiCurrencyCall(map: HashMap<String, String>): Observable<List<Post>>
+
+
 }

@@ -7,3 +7,5 @@ package com.rockmvvm.rockbasemvvm.data.remote
  **/
 
 const val ENDPOINT_POSTS = "/posts"
+
+const val ENDPOINT_CURRENCY = "/live"

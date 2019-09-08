@@ -13,8 +13,15 @@ import javax.inject.Singleton
 
 @Singleton
 class AppApiHelper @Inject constructor(private val mApiInterface: ApiInterface) : ApiHelper {
+    override fun doApiCurrencyCall(map: HashMap<String, String>): Observable<List<Post>> {
+        return mApiInterface.getCurrencyExchangeRates(map)
+
+    }
 
     override fun doPostsApiCall(): Observable<List<Post>> {
         return mApiInterface.getPosts()
     }
+
+
+
 }

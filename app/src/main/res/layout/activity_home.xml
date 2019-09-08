@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable name="viewModel"
+                  type="com.rockmvvm.rockbasemvvm.ui.currencyconverter.CurrencyViewModel"/>
+
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <EditText
+                android:id="@+id/etCurrency"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:hint="@string/please_enter_currency_in_usd"
+                android:layout_height="wrap_content"/>
+
+
+        <android.support.v7.widget.RecyclerView
+                app:layout_constraintTop_toBottomOf="@+id/etCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</layout>
