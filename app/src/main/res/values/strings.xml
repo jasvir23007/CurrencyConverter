@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DarkBaseMvvm</string>
+    <string name="post_error">Error in retriving fata</string>
+</resources>
