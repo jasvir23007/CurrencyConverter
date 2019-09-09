@@ -1,5 +1,6 @@
 package com.rockmvvm.rockbasemvvm.data.model
 
+import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
@@ -11,9 +12,10 @@ import android.arch.persistence.room.PrimaryKey
 
 @Entity
 data class Post(
-    val userId: Int,
-    @field:PrimaryKey
-    val id: Int,
-    val title: String,
-    val body: String
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    val id: Int = 1,
+    @ColumnInfo(name = "json")
+    val json: String
 )
+

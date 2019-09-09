@@ -2,18 +2,12 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "cf2d77d72a4c3786a6a2296e835458ab",
+    "identityHash": "4c3b1807c90091527cba02c0275aea5d",
     "entities": [
       {
         "tableName": "Post",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`userId` INTEGER NOT NULL, `id` INTEGER NOT NULL, `title` TEXT NOT NULL, `body` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `json` TEXT NOT NULL)",
         "fields": [
-          {
-            "fieldPath": "userId",
-            "columnName": "userId",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
           {
             "fieldPath": "id",
             "columnName": "id",
@@ -21,14 +15,8 @@
             "notNull": true
           },
           {
-            "fieldPath": "title",
-            "columnName": "title",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "body",
-            "columnName": "body",
+            "fieldPath": "json",
+            "columnName": "json",
             "affinity": "TEXT",
             "notNull": true
           }
@@ -37,7 +25,7 @@
           "columnNames": [
             "id"
           ],
-          "autoGenerate": false
+          "autoGenerate": true
         },
         "indices": [],
         "foreignKeys": []
@@ -45,7 +33,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"cf2d77d72a4c3786a6a2296e835458ab\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"4c3b1807c90091527cba02c0275aea5d\")"
     ]
   }
 }

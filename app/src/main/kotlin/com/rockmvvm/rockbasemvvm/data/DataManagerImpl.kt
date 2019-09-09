@@ -1,6 +1,7 @@
 package com.rockmvvm.rockbasemvvm.data
 
 import android.content.Context
+import com.rockmvvm.rockbasemvvm.data.local.db.AppDbHelper
 import com.rockmvvm.rockbasemvvm.data.model.Post
 import com.rockmvvm.rockbasemvvm.data.remote.ApiHelper
 import io.reactivex.Observable
@@ -16,8 +17,17 @@ import javax.inject.Singleton
 
 @Singleton
 class DataManagerImpl @Inject constructor(
-    private val mContext: Context, private val mApiHelper: ApiHelper
+    private val mDbHelper: AppDbHelper
+    , private val mApiHelper: ApiHelper
 ) : DataManager {
+    override fun saveData(data: String): Observable<Boolean> {
+      return  mDbHelper.saveData(data)
+    }
+
+    override fun getData(): String {
+        return mDbHelper.getData()
+    }
+
     override fun doApiCurrencyCall(map: HashMap<String, String>): Observable<Any> {
         return mApiHelper.doApiCurrencyCall(map)
     }

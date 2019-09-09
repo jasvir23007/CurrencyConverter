@@ -2,7 +2,6 @@ package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.rockmvvm.rockbasemvvm.BR
@@ -33,9 +32,7 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
         val amountToDisplay = data.value.toDouble() * amount.toDouble()
         val conversionText = holder.tvAmount.context.getString(R.string.converted_amount)
         holder.tvAmount.text = "$conversionText $amountToDisplay"
-
     }
-
 
     override fun getItemCount(): Int {
         return if (::langList.isInitialized) langList.size else 0
@@ -54,12 +51,10 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
     class ViewHolder(private val binding: ItemConverterBinding) :
         RecyclerView.ViewHolder(binding.root) {
         var tvAmount = binding.tvConversionAmount
-
         fun bind(obj: CurrencyListModel, size: Int) {
             binding.setVariable(BR.model, obj)
             binding.executePendingBindings()
 
-            // binding.tvAmont.text =
         }
     }
 }
