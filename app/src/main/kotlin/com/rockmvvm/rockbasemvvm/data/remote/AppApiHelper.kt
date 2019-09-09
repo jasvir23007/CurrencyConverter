@@ -2,6 +2,7 @@ package com.rockmvvm.rockbasemvvm.data.remote
 
 import com.rockmvvm.rockbasemvvm.data.model.Post
 import io.reactivex.Observable
+import org.json.JSONObject
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -13,7 +14,7 @@ import javax.inject.Singleton
 
 @Singleton
 class AppApiHelper @Inject constructor(private val mApiInterface: ApiInterface) : ApiHelper {
-    override fun doApiCurrencyCall(map: HashMap<String, String>): Observable<List<Post>> {
+    override fun doApiCurrencyCall(map: HashMap<String, String>): Observable<Any> {
         return mApiInterface.getCurrencyExchangeRates(map)
 
     }

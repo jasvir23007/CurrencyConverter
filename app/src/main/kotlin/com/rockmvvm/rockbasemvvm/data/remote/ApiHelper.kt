@@ -2,6 +2,7 @@ package com.rockmvvm.rockbasemvvm.data.remote
 
 import com.rockmvvm.rockbasemvvm.data.model.Post
 import io.reactivex.Observable
+import org.json.JSONObject
 
 /**
  *
@@ -12,7 +13,7 @@ interface ApiHelper {
 
     fun doPostsApiCall(): Observable<List<Post>>
 
-    fun doApiCurrencyCall(map: HashMap<String, String>): Observable<List<Post>>
+    fun doApiCurrencyCall(map: HashMap<String, String>): Observable<Any>
 
 
 }

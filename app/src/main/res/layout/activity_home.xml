@@ -4,8 +4,11 @@
 
     <data>
 
-        <variable name="viewModel"
-                  type="com.rockmvvm.rockbasemvvm.ui.currencyconverter.CurrencyViewModel"/>
+        <import type="android.view.View" />
+
+        <variable
+                name="viewModel"
+                type="com.rockmvvm.rockbasemvvm.ui.currencyconverter.CurrencyViewModel" />
 
     </data>
 
@@ -18,19 +21,33 @@
         <EditText
                 android:id="@+id/etCurrency"
                 android:layout_width="match_parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"
                 android:digits="0123456789"
-                android:inputType="number"
                 android:hint="@string/please_enter_currency_in_usd"
-                android:layout_height="wrap_content"/>
+                android:inputType="number"
+                android:onTextChanged="@{(text, start, before, count) -> viewModel.onAmountChanged(text)}"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         <android.support.v7.widget.RecyclerView
-                app:layout_constraintTop_toBottomOf="@+id/etCurrency"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:adapter="@{viewModel.currencyAdapter}"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/etCurrency"
+                app:spanCount="2">
 
         </android.support.v7.widget.RecyclerView>
+
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>

@@ -37,7 +37,7 @@ android {
 
         debug {
             minifyEnabled false
-            buildConfigField 'String', 'BASE_URL', '"https://apilayer.net/api/"'
+            buildConfigField 'String', 'BASE_URL', '"http://apilayer.net/api/"'
         }
 
         release {

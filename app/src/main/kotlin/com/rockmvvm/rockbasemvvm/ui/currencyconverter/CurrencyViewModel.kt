@@ -1,11 +1,16 @@
 package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 
+import com.google.gson.Gson
 import com.rockmvvm.rockbasemvvm.R
+import com.rockmvvm.rockbasemvvm.data.CurrencyListModel
 import com.rockmvvm.rockbasemvvm.data.DataManager
-import com.rockmvvm.rockbasemvvm.data.ResponseDTO
-import com.rockmvvm.rockbasemvvm.data.model.Post
 import com.rockmvvm.rockbasemvvm.ui.base.BaseViewModel
 import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProvider
+import org.json.JSONException
+import org.json.JSONObject
+
+
+
 
 /**
  *
@@ -17,6 +22,10 @@ class CurrencyViewModel(
     mSchedulerProvider: SchedulerProvider
 ) : BaseViewModel(mDataManager, mSchedulerProvider) {
 
+    var listAllCurrencyData = ArrayList<CurrencyListModel>()
+    var currencyAdapter = CurrencyAdapter()
+
+
     override fun retryClickListener() {
         loadPosts()
     }
@@ -27,8 +36,8 @@ class CurrencyViewModel(
 
 
     private fun loadPosts() {
-       val map = HashMap<String,String>()
-        map.put("access_key","a70973020b8650e5743e66eba2fd807b")
+        val map = HashMap<String, String>()
+        map.put("access_key", "a70973020b8650e5743e66eba2fd807b")
         getCompositeDisposable().add(
             getDataManager()
                 .doApiCurrencyCall(map)
@@ -36,7 +45,9 @@ class CurrencyViewModel(
                 .observeOn(getSchedulerProvider().ui())
                 .doOnSubscribe { showLoading() }
                 .doAfterTerminate { hideLoading() }
-                .subscribe({ result -> onRetrievePostListSuccess(result as ResponseDTO) }, { onRetrievePostListError() })
+                .subscribe(
+                    { result -> onRetrievePostListSuccess(result) },
+                    { onRetrievePostListError() })
         )
     }
 
@@ -48,11 +59,32 @@ class CurrencyViewModel(
         setIsLoading(true)
     }
 
-    private fun onRetrievePostListSuccess(postList: ResponseDTO) {
-        //postListAdapter.updatePostList(postList)
+    private fun onRetrievePostListSuccess(postList: Any) {
+        val jObj = JSONObject(Gson().toJson(postList))
+        val json = jObj.getJSONObject("quotes")
+        val iter = json.keys()
+        while (iter.hasNext()) {
+            val key = iter.next()
+            try {
+                val value = json.get(key)
+                listAllCurrencyData.add(CurrencyListModel(key, value.toString()))
+            } catch (e: JSONException) {
+                // went wrong!
+                e.printStackTrace()
+            }
+
+        }
+
+        currencyAdapter.updateList(listAllCurrencyData)
+
     }
 
     private fun onRetrievePostListError() {
         errorMessage.value = R.string.post_error
     }
+
+    fun onAmountChanged(text: CharSequence) {
+        currencyAdapter.updateAmount(text.toString())
+    }
+
 }

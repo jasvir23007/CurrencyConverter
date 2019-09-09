@@ -2,4 +2,6 @@
     <string name="app_name">DarkBaseMvvm</string>
     <string name="post_error">Error in retriving fata</string>
     <string name="please_enter_currency_in_usd">Please enter Currency in USD</string>
+    <string name="converted_amount">Converted Amount:</string>
+
 </resources>
