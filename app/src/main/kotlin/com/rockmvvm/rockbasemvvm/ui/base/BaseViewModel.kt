@@ -14,7 +14,7 @@ import io.reactivex.disposables.CompositeDisposable
  *
  **/
 abstract class BaseViewModel(
-    private val mDataManager: DataManager,
+    val mDataManager: DataManager,
     private val mSchedulerProvider: SchedulerProvider
 ) :
     ViewModel() {

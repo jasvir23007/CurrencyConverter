@@ -20,8 +20,8 @@ class DataManagerImpl @Inject constructor(
     private val mDbHelper: AppDbHelper
     , private val mApiHelper: ApiHelper
 ) : DataManager {
-    override fun saveData(data: String): Observable<Boolean> {
-      return  mDbHelper.saveData(data)
+    override fun saveData(data: String) {
+        mDbHelper.saveData(data)
     }
 
     override fun getData(): String {

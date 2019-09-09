@@ -13,17 +13,24 @@ import javax.inject.Singleton
 
 @Singleton
 class AppDbHelper @Inject constructor(private val mAppDatabase: AppDatabase) : DbHelper {
+    override fun saveData(data: String) {
+
+        if (mAppDatabase.postDao().insert(Post(json = data)) == -1L) {
+            mAppDatabase.postDao().update(Post(json = data))
+        }
+    }
+
     override fun getData(): String {
         return mAppDatabase.postDao().data
     }
 
 
-    override fun saveData(data: String): Observable<Boolean> = Observable.fromCallable {
-        if (mAppDatabase.postDao().insert(Post(json = data)) == -1L) {
-            mAppDatabase.postDao().update(Post(json = data))
-        }
-        true
-    }
+//    override fun saveData(data: String): Observable<Boolean> = Observable.fromCallable {
+//        if (mAppDatabase.postDao().insert(Post(json = data)) == -1L) {
+//            mAppDatabase.postDao().update(Post(json = data))
+//        }
+//        true
+//    }
 
 
 }

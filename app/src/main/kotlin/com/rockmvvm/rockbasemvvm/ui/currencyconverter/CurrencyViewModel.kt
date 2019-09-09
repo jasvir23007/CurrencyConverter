@@ -1,5 +1,6 @@
 package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 
+import android.util.Log
 import com.google.gson.Gson
 import com.rockmvvm.rockbasemvvm.R
 import com.rockmvvm.rockbasemvvm.data.CurrencyListModel
@@ -60,6 +61,11 @@ class CurrencyViewModel(
     }
 
     private fun onRetrievePostListSuccess(postList: Any) {
+
+        mDataManager.saveData(postList.toString())
+
+        Log.i("judfhewf","==="+ mDataManager.getData())
+
         val jObj = JSONObject(Gson().toJson(postList))
         val json = jObj.getJSONObject("quotes")
         val iter = json.keys()

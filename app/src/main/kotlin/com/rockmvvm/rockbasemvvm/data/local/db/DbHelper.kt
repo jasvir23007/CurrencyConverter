@@ -9,7 +9,7 @@ import io.reactivex.Observable
  **/
 interface DbHelper {
 
-    fun saveData(data: String): Observable<Boolean>
+    fun saveData(data: String)
 
     fun getData(): String
 
