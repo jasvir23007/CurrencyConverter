@@ -40,7 +40,7 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
             .build()
 
         val workRequest =
-            PeriodicWorkRequest.Builder(PeriodicWork::class.java, 5, TimeUnit.MINUTES)
+            PeriodicWorkRequest.Builder(PeriodicWork::class.java, 30, TimeUnit.MINUTES)
                 .setConstraints(constraint)
                 .build()
 

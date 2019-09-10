@@ -11,10 +11,6 @@ import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProvider
 class DaggerWorkerFactory(private val mDataManager: DataManager,
                           private val mSchedulerProvider: SchedulerProvider
 ):  WorkerFactory() {
-
-
-
-
     override fun createWorker(
         appContext: Context,
         workerClassName: String,
