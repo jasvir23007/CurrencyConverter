@@ -15,6 +15,8 @@ import javax.inject.Inject
 
 open class MyApplication : DaggerApplication() {
 
+    var mCurrentActivity:Activity? = null
+
     override fun applicationInjector(): AndroidInjector<out MyApplication> {
         return DaggerAppInjector.builder().create(this)
     }
@@ -31,5 +33,15 @@ open class MyApplication : DaggerApplication() {
     override fun onCreate() {
         super.onCreate()
     }
+
+
+    fun getCurrentActivity(): Activity? {
+        return mCurrentActivity
+    }
+
+    fun setCurrentActivity(mCurrentActivity: Activity) {
+        this.mCurrentActivity = mCurrentActivity
+    }
+
 
 }

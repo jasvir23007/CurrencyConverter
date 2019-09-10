@@ -24,17 +24,13 @@ class PeriodicWork(var ctx: Context, params: WorkerParameters) : Worker(ctx, par
     lateinit var mSchedulerProvider: SchedulerProvider
 
 
-
-    fun inject(activity: Activity){
+    fun inject(activity: Activity) {
         AndroidInjection.inject(activity)
     }
 
 
     override fun doWork(): Result {
-
-
-
-
+        inject((ctx as MyApplication).mCurrentActivity!!)
         val map = HashMap<String, String>()
         map.put("access_key", "a70973020b8650e5743e66eba2fd807b")
         mDataManager.doApiCurrencyCall(map)

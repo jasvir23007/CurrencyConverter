@@ -5,6 +5,7 @@ import androidx.databinding.ViewDataBinding
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import com.rockmvvm.rockbasemvvm.MyApplication
 import com.rockmvvm.rockbasemvvm.ViewModelFactory
 import dagger.android.AndroidInjection
 import javax.inject.Inject
@@ -31,6 +32,8 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel> : AppCompatA
 
     fun getViewDataBinding(): T = mViewDataBinding
 
+    var myApp: MyApplication? = null
+
 
     private fun performDataBinding() {
         if (mViewModel == null) {
@@ -45,5 +48,14 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel> : AppCompatA
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         performDataBinding()
+        myApp = applicationContext as MyApplication
     }
+
+    override fun onResume() {
+        super.onResume()
+        myApp?.setCurrentActivity(this)
+
+    }
+
+
 }
