@@ -1,6 +1,5 @@
 package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 
-import android.util.Log
 import com.google.gson.Gson
 import com.rockmvvm.rockbasemvvm.R
 import com.rockmvvm.rockbasemvvm.data.CurrencyListModel
@@ -9,7 +8,6 @@ import com.rockmvvm.rockbasemvvm.ui.base.BaseViewModel
 import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProvider
 import org.json.JSONException
 import org.json.JSONObject
-
 
 
 
@@ -28,11 +26,14 @@ class CurrencyViewModel(
 
 
     override fun retryClickListener() {
-        loadPosts()
+        // loadPosts()
     }
 
     init {
-        loadPosts()
+        if (mDataManager.getData() != null)
+            onRetrievePostListSuccess()
+        //else
+           // loadPosts()
     }
 
 
@@ -47,7 +48,10 @@ class CurrencyViewModel(
                 .doOnSubscribe { showLoading() }
                 .doAfterTerminate { hideLoading() }
                 .subscribe(
-                    { result -> onRetrievePostListSuccess(result) },
+                    { result ->
+                        mDataManager.saveData(Gson().toJson(result))
+                        onRetrievePostListSuccess()
+                    },
                     { onRetrievePostListError() })
         )
     }
@@ -60,13 +64,8 @@ class CurrencyViewModel(
         setIsLoading(true)
     }
 
-    private fun onRetrievePostListSuccess(postList: Any) {
-
-        mDataManager.saveData(postList.toString())
-
-        Log.i("judfhewf","==="+ mDataManager.getData())
-
-        val jObj = JSONObject(Gson().toJson(postList))
+    private fun onRetrievePostListSuccess() {
+        val jObj = JSONObject((mDataManager.getData()))
         val json = jObj.getJSONObject("quotes")
         val iter = json.keys()
         while (iter.hasNext()) {
@@ -80,7 +79,6 @@ class CurrencyViewModel(
             }
 
         }
-
         currencyAdapter.updateList(listAllCurrencyData)
 
     }

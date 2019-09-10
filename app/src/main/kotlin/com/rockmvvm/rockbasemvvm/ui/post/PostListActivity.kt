@@ -1,10 +1,10 @@
 package com.rockmvvm.rockbasemvvm.ui.post
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.annotation.StringRes
-import android.support.design.widget.Snackbar
+import androidx.annotation.StringRes
+import com.google.android.material.snackbar.Snackbar
 import com.rockmvvm.rockbasemvvm.BR
 import com.rockmvvm.rockbasemvvm.R
 import com.rockmvvm.rockbasemvvm.databinding.ActivityPostListBinding

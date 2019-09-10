@@ -1,10 +1,10 @@
 package com.rockmvvm.rockbasemvvm.ui.base
 
-import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import android.os.Bundle
-import android.support.annotation.LayoutRes
-import android.support.v7.app.AppCompatActivity
+import androidx.annotation.LayoutRes
+import androidx.appcompat.app.AppCompatActivity
 import com.rockmvvm.rockbasemvvm.ViewModelFactory
 import dagger.android.AndroidInjection
 import javax.inject.Inject

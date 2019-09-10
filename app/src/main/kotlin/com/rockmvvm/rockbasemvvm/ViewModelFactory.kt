@@ -1,7 +1,7 @@
 package com.rockmvvm.rockbasemvvm
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.rockmvvm.rockbasemvvm.data.DataManager
 import com.rockmvvm.rockbasemvvm.ui.currencyconverter.CurrencyViewModel
 import com.rockmvvm.rockbasemvvm.ui.post.PostListViewModel

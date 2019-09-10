@@ -1,6 +1,6 @@
 package com.rockmvvm.rockbasemvvm.data.local.db.dao
 
-import android.arch.persistence.room.*
+import androidx.room.*
 import com.rockmvvm.rockbasemvvm.data.model.Post
 
 /**
