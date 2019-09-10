@@ -1,7 +1,6 @@
 package com.rockmvvm.rockbasemvvm.di.builder
 
 import com.rockmvvm.rockbasemvvm.ui.currencyconverter.ActivityConverter
-import com.rockmvvm.rockbasemvvm.ui.post.PostListActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -13,9 +12,6 @@ import dagger.android.ContributesAndroidInjector
 
 @Module
 abstract class ActivityBuilder {
-
-    @ContributesAndroidInjector
-    abstract fun bindPostListActivity(): PostListActivity
 
     @ContributesAndroidInjector
     abstract fun bindConverterActivity(): ActivityConverter
