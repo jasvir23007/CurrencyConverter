@@ -1,5 +1,6 @@
 package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 
+import android.app.Activity
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.work.*
@@ -8,7 +9,9 @@ import com.rockmvvm.rockbasemvvm.R
 import com.rockmvvm.rockbasemvvm.databinding.ActivityHomeBinding
 import com.rockmvvm.rockbasemvvm.ui.base.BaseActivity
 import com.rockmvvm.rockbasemvvm.workmanager.PeriodicWork
+import dagger.android.DispatchingAndroidInjector
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
 class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>() {
     override fun getBindingVariable(): Int {
@@ -24,6 +27,7 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
         return mViewModel as CurrencyViewModel
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         periodicDBUpdate()
@@ -36,7 +40,7 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
             .build()
 
         val workRequest =
-            PeriodicWorkRequest.Builder(PeriodicWork::class.java, 1, TimeUnit.MINUTES)
+            PeriodicWorkRequest.Builder(PeriodicWork::class.java, 5, TimeUnit.MINUTES)
                 .setConstraints(constraint)
                 .build()
 

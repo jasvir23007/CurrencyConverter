@@ -1,18 +1,13 @@
 package com.rockmvvm.rockbasemvvm.workmanager
 
-import android.app.Activity
 import android.content.Context
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.google.gson.Gson
 import com.rockmvvm.rockbasemvvm.MyApplication
 import com.rockmvvm.rockbasemvvm.data.DataManager
-import com.rockmvvm.rockbasemvvm.di.component.DaggerAppInjector
 import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProvider
-import dagger.android.AndroidInjection
 import javax.inject.Inject
-import android.app.ActivityManager
-import android.content.ComponentName
 
 
 class PeriodicWork(var ctx: Context, params: WorkerParameters) : Worker(ctx, params) {
@@ -24,13 +19,14 @@ class PeriodicWork(var ctx: Context, params: WorkerParameters) : Worker(ctx, par
     lateinit var mSchedulerProvider: SchedulerProvider
 
 
-    fun inject(activity: Activity) {
-        AndroidInjection.inject(activity)
-    }
+//    fun inject(activity: Activity) {
+//        AndroidInjection.inject(activity)
+//    }
 
 
     override fun doWork(): Result {
-        inject((ctx as MyApplication).mCurrentActivity!!)
+
+
         val map = HashMap<String, String>()
         map.put("access_key", "a70973020b8650e5743e66eba2fd807b")
         mDataManager.doApiCurrencyCall(map)

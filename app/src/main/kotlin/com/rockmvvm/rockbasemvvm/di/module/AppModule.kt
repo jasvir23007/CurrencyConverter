@@ -2,6 +2,7 @@ package com.rockmvvm.rockbasemvvm.di.module
 
 import androidx.room.Room
 import android.content.Context
+import androidx.work.WorkerFactory
 import com.rockmvvm.rockbasemvvm.MyApplication
 import com.rockmvvm.rockbasemvvm.data.DataManager
 import com.rockmvvm.rockbasemvvm.data.DataManagerImpl
@@ -14,6 +15,7 @@ import com.rockmvvm.rockbasemvvm.di.DatabaseInfo
 import com.rockmvvm.rockbasemvvm.util.DATABASE_NAME
 import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProvider
 import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProviderImpl
+import com.rockmvvm.rockbasemvvm.workmanager.DaggerWorkerFactory
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -48,6 +50,14 @@ object AppModule {
     @JvmStatic
     internal fun provideSchedulerProvider(): SchedulerProvider = SchedulerProviderImpl()
 
+
+    @Provides
+    @Singleton
+    @JvmStatic
+    internal fun workerFactory( mDataManager: DataManager,
+                        mSchedulerProvider: SchedulerProvider): WorkerFactory {
+        return DaggerWorkerFactory(mDataManager,mSchedulerProvider)
+    }
 
     @Provides
     @Singleton

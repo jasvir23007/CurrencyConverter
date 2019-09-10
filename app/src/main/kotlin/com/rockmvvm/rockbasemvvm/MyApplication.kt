@@ -1,6 +1,10 @@
 package com.rockmvvm.rockbasemvvm
 
 import android.app.Activity
+import androidx.work.Configuration
+import androidx.work.WorkManager
+import androidx.work.WorkerFactory
+import com.rockmvvm.rockbasemvvm.di.component.AppInjector
 import com.rockmvvm.rockbasemvvm.di.component.DaggerAppInjector
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
@@ -15,11 +19,15 @@ import javax.inject.Inject
 
 open class MyApplication : DaggerApplication() {
 
-    var mCurrentActivity:Activity? = null
+    var mCurrentActivity: Activity? = null
+    lateinit var appInjector: AndroidInjector<MyApplication>
 
     override fun applicationInjector(): AndroidInjector<out MyApplication> {
         return DaggerAppInjector.builder().create(this)
     }
+
+    @Inject
+    lateinit var workerFactory: WorkerFactory
 
 
     @Inject
@@ -30,8 +38,13 @@ open class MyApplication : DaggerApplication() {
     }
 
 
+
+
     override fun onCreate() {
         super.onCreate()
+
+        //applicationInjector().inject()
+        configureWorkManager()
     }
 
 
@@ -43,5 +56,11 @@ open class MyApplication : DaggerApplication() {
         this.mCurrentActivity = mCurrentActivity
     }
 
+    private fun configureWorkManager() {
+        val config = Configuration.Builder()
+            .setWorkerFactory(workerFactory)
+            .build()
 
+        WorkManager.initialize(this, config)
+    }
 }

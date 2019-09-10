@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.rockmvvm.rockbasemvvm">
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.rockmvvm.rockbasemvvm">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -21,6 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <provider
+                android:name="androidx.work.impl.WorkManagerInitializer"
+                android:authorities="${applicationId}.workmanager-init"
+                android:enabled="false"
+                android:exported="false"
+                tools:replace="android:authorities" />
+
+
     </application>
+
 
 </manifest>
