@@ -10,7 +10,12 @@
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d235e3-545d-4c14-9e01-b4b930894623" name="Default Changelist" comment="" />
+    <list default="true" id="80d235e3-545d-4c14-9e01-b4b930894623" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/base/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/base/BaseActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,50 +41,58 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/module/AppModule.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/component/AppInjector.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-              <folding>
-                <element signature="e#48#459#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/MyApplication.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
+            <state relative-caret-position="555">
               <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/builder/ActivityBuilder.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
-          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ViewModelFactory.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+            <state relative-caret-position="282">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="e#56#674#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/PeriodicWork.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/base/BaseActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -87,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
+            <state relative-caret-position="690">
               <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
             </state>
           </provider>
@@ -96,40 +109,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="294">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
               <folding>
                 <element signature="e#56#395#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.work/work-runtime/2.2.0/931b590ec36e49f50b2383517f00cff323111b3e/work-runtime-2.2.0-sources.jar!/androidx/work/PeriodicWorkRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="93" column="56" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/java/util/concurrent/TimeUnit.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/DaggerWorkerFactory.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#47#297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,6 +153,7 @@
       <find>activityInjector</find>
       <find>myapp</find>
       <find>Context</find>
+      <find>bindPostListActivity</find>
     </findStrings>
     <replaceStrings>
       <replace>jasvir</replace>
@@ -182,8 +166,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/builder/ActivityBuilder.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ViewModelFactory.kt" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/remote/ApiEndPoint.kt" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/model/Currency.java" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/model/Currency.kt" />
@@ -205,8 +187,6 @@
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/DataManagerImpl.kt" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/local/db/AppDbHelper.kt" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/base/BaseActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/WorkerModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/PeriodicWork.kt" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/MyApplication.kt" />
@@ -214,6 +194,10 @@
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/module/AppModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/DaggerWorkerFactory.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/builder/ActivityBuilder.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ViewModelFactory.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/base/BaseActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt" />
       </list>
     </option>
@@ -235,153 +219,14 @@
           <expand>
             <path>
               <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="di" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="di" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="di" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="currencyconverter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="workmanager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java (generated)" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="rockmvvm" type="462c0819:PsiDirectoryNode" />
-              <item name="rockbasemvvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CurrencyConverter" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -494,9 +339,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-15" y="23" width="1600" height="806" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24390244" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24390244" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -504,12 +350,12 @@
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.4081042" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.49782923" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.6150507" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.6410999" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.48391813" />
-      <window_info anchor="bottom" id="Terminal" order="5" visible="true" weight="0.32706222" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.41678727" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32706222" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.3299566" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
@@ -562,13 +408,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt</url>
-          <line>50</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt</url>
-          <line>54</line>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -646,87 +492,111 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>32</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>37</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>39</line>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>41</line>
+          <line>48</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>43</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>48</line>
+          <line>55</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>47</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>49</line>
+          <line>56</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
-          <line>51</line>
+          <line>58</line>
           <properties />
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/QuotesDTO.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/post/PostListViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_post_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#529#1022#0" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/post/PostListViewModel.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/ResponseDTO.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -749,12 +619,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_converter.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/CurrencyListModel.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -764,12 +634,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
           <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -778,13 +648,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/post/PostListActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/post/PostListActivity.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/data/model/CurrencyData.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -904,24 +768,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/base/BaseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.work/work-runtime/2.2.0/931b590ec36e49f50b2383517f00cff323111b3e/work-runtime-2.2.0-sources.jar!/androidx/work/WorkManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="144" column="22" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/builder/ActivityBuilder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -939,13 +789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/WorkerModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/WorkerModule.kt" />
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
@@ -974,30 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/PeriodicWork.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#47#307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ViewModelFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/rockmvvm/rockbasemvvm/di/component/AppInjector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/component/AppInjector.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -1016,65 +836,102 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/java/util/concurrent/TimeUnit.class">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/dataBindingGenBaseClassesDebug/out/com/rockmvvm/rockbasemvvm/databinding/ActivityPostListBinding.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_post_list.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/MyApplication.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+        <state relative-caret-position="555">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/di/builder/ActivityBuilder.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.work/work-runtime/2.2.0/931b590ec36e49f50b2383517f00cff323111b3e/work-runtime-2.2.0-sources.jar!/androidx/work/PeriodicWorkRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="1065">
           <caret line="93" column="56" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/MyApplication.kt">
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/java/util/concurrent/TimeUnit.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="90">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/DaggerWorkerFactory.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ViewModelFactory.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/rockmvvm/rockbasemvvm/di/component/AppInjector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/base/BaseActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/PeriodicWork.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyViewModel.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        <state relative-caret-position="294">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="e#56#395#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/CurrencyAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/workmanager/DaggerWorkerFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#47#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/rockmvvm/rockbasemvvm/ui/currencyconverter/ActivityConverter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        <state relative-caret-position="282">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#56#674#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

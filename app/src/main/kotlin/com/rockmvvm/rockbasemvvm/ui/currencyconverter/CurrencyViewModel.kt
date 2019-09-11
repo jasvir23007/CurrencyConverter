@@ -10,7 +10,6 @@ import org.json.JSONException
 import org.json.JSONObject
 
 
-
 /**
  *
  * Created by jasvir on 2019-05-05
@@ -33,7 +32,7 @@ class CurrencyViewModel(
         if (mDataManager.getData() != null)
             onRetrievePostListSuccess()
         //else
-           // loadPosts()
+        // loadPosts()
     }
 
 
@@ -64,23 +63,24 @@ class CurrencyViewModel(
         setIsLoading(true)
     }
 
-    private fun onRetrievePostListSuccess() {
-        val jObj = JSONObject((mDataManager.getData()))
-        val json = jObj.getJSONObject("quotes")
-        val iter = json.keys()
-        while (iter.hasNext()) {
-            val key = iter.next()
-            try {
-                val value = json.get(key)
-                listAllCurrencyData.add(CurrencyListModel(key, value.toString()))
-            } catch (e: JSONException) {
-                // went wrong!
-                e.printStackTrace()
+    fun onRetrievePostListSuccess() {
+        if (mDataManager.getData() != null) {
+            val jObj = JSONObject((mDataManager.getData()))
+            val json = jObj.getJSONObject("quotes")
+            val iter = json.keys()
+            while (iter.hasNext()) {
+                val key = iter.next()
+                try {
+                    val value = json.get(key)
+                    listAllCurrencyData.add(CurrencyListModel(key, value.toString()))
+                } catch (e: JSONException) {
+                    // went wrong!
+                    e.printStackTrace()
+                }
+
             }
-
+            currencyAdapter.updateList(listAllCurrencyData)
         }
-        currencyAdapter.updateList(listAllCurrencyData)
-
     }
 
     private fun onRetrievePostListError() {

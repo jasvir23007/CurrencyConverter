@@ -3,6 +3,7 @@ package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 import android.app.Activity
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.os.Handler
 import androidx.work.*
 import com.rockmvvm.rockbasemvvm.BR
 import com.rockmvvm.rockbasemvvm.R
@@ -12,6 +13,12 @@ import com.rockmvvm.rockbasemvvm.workmanager.PeriodicWork
 import dagger.android.DispatchingAndroidInjector
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
+import androidx.work.WorkManager
+import androidx.lifecycle.Observer
+import androidx.work.impl.model.WorkTypeConverters.StateIds.ENQUEUED
+
+
+
 
 class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>() {
     override fun getBindingVariable(): Int {
@@ -30,6 +37,7 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mViewDataBinding.setLifecycleOwner(this)
         periodicDBUpdate()
     }
 
@@ -52,7 +60,20 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
             workRequest
         )
 
-    }
+        WorkManager.getInstance(this)
+            .getWorkInfoByIdLiveData(workRequest.id)
+            .observe(this, Observer { workInfo ->
+                if ((workInfo != null) &&
+                    (workInfo.state == WorkInfo.State.ENQUEUED)) {
+                    Handler().postDelayed({
 
+                        getViewModel().onRetrievePostListSuccess()
+                    }, 1000)
+                }
+            })
+
+
+
+    }
 
 }

@@ -17,7 +17,7 @@ import javax.inject.Inject
  **/
 abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel> : AppCompatActivity() {
 
-    private lateinit var mViewDataBinding: T
+    public lateinit var mViewDataBinding: T
     protected var mViewModel: V? = null
 
     @Inject
