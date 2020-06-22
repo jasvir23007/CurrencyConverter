@@ -5,6 +5,8 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.google.gson.Gson
 import com.rockmvvm.rockbasemvvm.MyApplication
+import com.rockmvvm.rockbasemvvm.constants.Constants.ACCESS_KEY
+import com.rockmvvm.rockbasemvvm.constants.Constants.ACCESS_KEY_VALUE
 import com.rockmvvm.rockbasemvvm.data.DataManager
 import com.rockmvvm.rockbasemvvm.util.rx.SchedulerProvider
 import javax.inject.Inject
@@ -19,16 +21,9 @@ class PeriodicWork(var ctx: Context, params: WorkerParameters) : Worker(ctx, par
     lateinit var mSchedulerProvider: SchedulerProvider
 
 
-//    fun inject(activity: Activity) {
-//        AndroidInjection.inject(activity)
-//    }
-
-
     override fun doWork(): Result {
-
-
         val map = HashMap<String, String>()
-        map.put("access_key", "a70973020b8650e5743e66eba2fd807b")
+        map.put(ACCESS_KEY, ACCESS_KEY_VALUE)
         mDataManager.doApiCurrencyCall(map)
             .subscribeOn(mSchedulerProvider.io())
             .observeOn(mSchedulerProvider.ui())
@@ -40,8 +35,6 @@ class PeriodicWork(var ctx: Context, params: WorkerParameters) : Worker(ctx, par
                 {
                     Result.retry();
                 })
-
-
 
         return Result.success()
 

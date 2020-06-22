@@ -1,5 +1,8 @@
 package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import com.rockmvvm.rockbasemvvm.R
 import com.rockmvvm.rockbasemvvm.data.CurrencyListModel
@@ -22,6 +25,9 @@ class CurrencyViewModel(
 
     var listAllCurrencyData = ArrayList<CurrencyListModel>()
     var currencyAdapter = CurrencyAdapter()
+    val listCurrency = ArrayList<String>()
+
+    val liveDataCurrency = MutableLiveData<ArrayList<String>>()
 
 
     override fun retryClickListener() {
@@ -31,29 +37,10 @@ class CurrencyViewModel(
     init {
         if (mDataManager.getData() != null)
             onRetrievePostListSuccess()
-        //else
-        // loadPosts()
+
     }
 
 
-    private fun loadPosts() {
-        val map = HashMap<String, String>()
-        map.put("access_key", "a70973020b8650e5743e66eba2fd807b")
-        getCompositeDisposable().add(
-            getDataManager()
-                .doApiCurrencyCall(map)
-                .subscribeOn(getSchedulerProvider().io())
-                .observeOn(getSchedulerProvider().ui())
-                .doOnSubscribe { showLoading() }
-                .doAfterTerminate { hideLoading() }
-                .subscribe(
-                    { result ->
-                        mDataManager.saveData(Gson().toJson(result))
-                        onRetrievePostListSuccess()
-                    },
-                    { onRetrievePostListError() })
-        )
-    }
 
     private fun hideLoading() {
         setIsLoading(false)
@@ -64,7 +51,9 @@ class CurrencyViewModel(
     }
 
     fun onRetrievePostListSuccess() {
+
         if (mDataManager.getData() != null) {
+            listCurrency.clear()
             val jObj = JSONObject((mDataManager.getData()))
             val json = jObj.getJSONObject("quotes")
             val iter = json.keys()
@@ -72,7 +61,13 @@ class CurrencyViewModel(
                 val key = iter.next()
                 try {
                     val value = json.get(key)
-                    listAllCurrencyData.add(CurrencyListModel(key, value.toString()))
+                    val fact = 1/value.toString().toDouble()
+                    listAllCurrencyData.add(CurrencyListModel(key, value.toString(),fact))
+                    if (key.equals("USDUSD"))
+                        listCurrency.add("USD")
+                    else
+                    listCurrency.add(key.replace("USD",""))
+
                 } catch (e: JSONException) {
                     // went wrong!
                     e.printStackTrace()
@@ -80,6 +75,7 @@ class CurrencyViewModel(
 
             }
             currencyAdapter.updateList(listAllCurrencyData)
+            liveDataCurrency.value = listCurrency
         }
     }
 

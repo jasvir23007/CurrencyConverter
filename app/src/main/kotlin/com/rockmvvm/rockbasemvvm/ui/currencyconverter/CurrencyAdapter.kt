@@ -14,6 +14,7 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
 
     private lateinit var langList: MutableList<CurrencyListModel>
     private var amount: String = ""
+    private var currencyModel:CurrencyListModel?=null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemConverterBinding = DataBindingUtil.inflate(
@@ -29,7 +30,7 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
         holder.bind(langList[position], langList.size)
         if (amount.isEmpty())
             amount = "0"
-        val amountToDisplay = data.value.toDouble() * amount.toDouble()
+        val amountToDisplay = currencyModel!!.converSionFact/data.converSionFact * amount.toDouble()
         val conversionText = holder.tvAmount.context.getString(R.string.converted_amount)
         holder.tvAmount.text = "$conversionText $amountToDisplay"
     }
@@ -40,6 +41,7 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
 
     fun updateList(postList: MutableList<CurrencyListModel>) {
         this.langList = postList
+        currencyModel = postList[0]
         notifyDataSetChanged()
     }
 
@@ -47,6 +49,12 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
         this.amount = amount
         notifyDataSetChanged()
     }
+
+    fun updateCurrency(position:Int){
+        currencyModel = langList[position]
+        notifyDataSetChanged()
+    }
+
 
     class ViewHolder(private val binding: ItemConverterBinding) :
         RecyclerView.ViewHolder(binding.root) {

@@ -1,23 +1,22 @@
 package com.rockmvvm.rockbasemvvm.ui.currencyconverter
 
-import android.app.Activity
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.os.Handler
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.work.*
-import com.rockmvvm.rockbasemvvm.BR
 import com.rockmvvm.rockbasemvvm.R
+
+import com.rockmvvm.rockbasemvvm.BR
+import com.rockmvvm.rockbasemvvm.constants.Constants.REFRESH_RATE
+import com.rockmvvm.rockbasemvvm.constants.Constants.UNIQUE_WORKER
 import com.rockmvvm.rockbasemvvm.databinding.ActivityHomeBinding
 import com.rockmvvm.rockbasemvvm.ui.base.BaseActivity
 import com.rockmvvm.rockbasemvvm.workmanager.PeriodicWork
-import dagger.android.DispatchingAndroidInjector
+import kotlinx.android.synthetic.main.activity_home.*
 import java.util.concurrent.TimeUnit
-import javax.inject.Inject
-import androidx.work.WorkManager
-import androidx.lifecycle.Observer
-import androidx.work.impl.model.WorkTypeConverters.StateIds.ENQUEUED
-
-
 
 
 class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>() {
@@ -39,6 +38,10 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
         super.onCreate(savedInstanceState)
         mViewDataBinding.setLifecycleOwner(this)
         periodicDBUpdate()
+        mViewModel?.liveDataCurrency?.observe(this, Observer {
+            setSpinner(it)
+        })
+
     }
 
 
@@ -48,14 +51,14 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
             .build()
 
         val workRequest =
-            PeriodicWorkRequest.Builder(PeriodicWork::class.java, 30, TimeUnit.MINUTES)
+            PeriodicWorkRequest.Builder(PeriodicWork::class.java, REFRESH_RATE, TimeUnit.MINUTES)
                 .setConstraints(constraint)
                 .build()
 
 
         val workManager = WorkManager.getInstance(this)
         workManager.enqueueUniquePeriodicWork(
-            "my_unique_worker",
+            UNIQUE_WORKER,
             ExistingPeriodicWorkPolicy.KEEP,
             workRequest
         )
@@ -65,15 +68,37 @@ class ActivityConverter : BaseActivity<ActivityHomeBinding, CurrencyViewModel>()
             .observe(this, Observer { workInfo ->
                 if ((workInfo != null) &&
                     (workInfo.state == WorkInfo.State.ENQUEUED)) {
-                    Handler().postDelayed({
+                    getViewModel().onRetrievePostListSuccess()
 
-                        getViewModel().onRetrievePostListSuccess()
-                    }, 1000)
                 }
             })
+    }
+
+
+
+    private fun setSpinner(list:ArrayList<String>){
+        val adapter: ArrayAdapter<String> = ArrayAdapter<String>(
+            this,
+            android.R.layout.simple_spinner_item,
+            list
+        )
+        spChooseCurrency.setAdapter(adapter)
+
+        spChooseCurrency?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                mViewModel?.currencyAdapter?.updateCurrency(position)
+            }
+
+        }
 
 
 
     }
+
+
 
 }
